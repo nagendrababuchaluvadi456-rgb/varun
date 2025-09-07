@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swara Varun Teja | Portfolio</title>
+  <style>
+    * {margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif;}
+    body {background:#0f172a; color:#f1f5f9;}
+    header {background:linear-gradient(135deg, #1e293b, #0f172a); color:#fff; padding:60px 20px; text-align:center;}
+    header h1 {font-size:2.5rem; margin-bottom:10px;}
+    header p {font-size:1.2rem; color:#94a3b8;}
+    nav {background:#1e293b; padding:15px; text-align:center; position:sticky; top:0; z-index:100;}
+    nav a {color:#f1f5f9; margin:0 20px; text-decoration:none; font-weight:600; transition:0.3s;}
+    nav a:hover {color:#38bdf8;}
+    section {padding:60px 20px; max-width:1100px; margin:auto;}
+    h2 {margin-bottom:20px; font-size:2rem; color:#38bdf8; position:relative;}
+    h2::after {content:''; width:60px; height:3px; background:#38bdf8; position:absolute; left:0; bottom:-8px;}
+    .about {display:flex; flex-wrap:wrap; align-items:center; gap:30px;}
+    .about img {width:200px; height:200px; border-radius:50%; border:5px solid #38bdf8;}
+    .skills span {background:#38bdf8; color:#0f172a; padding:10px 18px; margin:6px; display:inline-block; border-radius:20px; font-weight:600; transition:0.3s;}
+    .skills span:hover {background:#0ea5e9; color:#fff;}
+    .education, .projects {list-style:none; padding:0;}
+    .education li, .projects li {background:#1e293b; margin:12px 0; padding:20px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.3); transition:0.3s;}
+    .education li:hover, .projects li:hover {transform:translateY(-5px);}
+    #contact p {margin:8px 0;}
+    footer {background:#1e293b; color:#94a3b8; text-align:center; padding:25px; margin-top:40px; font-size:0.9rem;}
+    /* Animation */
+    [data-animate] {opacity:0; transform:translateY(30px); transition:all 0.8s ease-out;}
+    [data-animate].visible {opacity:1; transform:translateY(0);}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Swara Varun Teja</h1>
+    <p>B.Tech in Electrical & Electronics Engineering | Aspiring Engineer</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about" class="about" data-animate>
+    <img src="WhatsApp Image 2025-09-07 at 12.25.06 PM.jpeg" alt="Profile Picture">
+    <div>
+      <h2>About Me</h2>
+      <p>Hello! I am Swarna Varun Teja, an enthusiastic learner pursuing B.Tech in Electrical and Electronics Engineering. I am passionate about technology, problem-solving, and eager to grab opportunities that help me grow and contribute to the field of engineering.</p>
+    </div>
+  </section>
+
+  <section id="education" data-animate>
+    <h2>Education</h2>
+    <ul class="education">
+      <li><strong>B-Tech (EEE)</strong> - QISCET Ongole (Pursuing)</li>
+      <li><strong>Diploma (EEE)</strong> - Rise Krishna Sai Polytechnic, Valluru (2025) - 71.58%</li>
+      <li><strong>S.S.C</strong> - A.P.S.W.R School, Ardhaveedu (2022) - 71.66%</li>
+    </ul>
+  </section>
+
+  <section id="skills" data-animate>
+    <h2>Technical Skills</h2>
+    <div class="skills">
+      <span>MS Excel</span>
+      <span>MS Word</span>
+      <span>AutoCAD</span>
+      <span>MATLAB</span>
+    </div>
+  </section>
+
+  <section id="projects" data-animate>
+    <h2>Projects</h2>
+    <ul class="projects">
+      <li><strong>Day Follow Sun Tracking Solar Panel</strong> (based on time domain)</li>
+    </ul>
+  </section>
+
+  <section id="contact" data-animate>
+    <h2>Contact</h2>
+    <p><strong>Phone:</strong> 7095688792</p>
+    <p><strong>Email:</strong> <a href="mailto:tejswarna629@gmail.com" style="color:#38bdf8;">tejswarna629@gmail.com</a></p>
+    <p><strong>Languages:</strong> English, Telugu</p>
+    <p><strong>Address:</strong> Doddavarappadu Village, Maddipadu (MD), Prakasam District</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Swarna Varun Teja. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    const elements = document.querySelectorAll('[data-animate]');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {threshold:0.2});
+
+    elements.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
